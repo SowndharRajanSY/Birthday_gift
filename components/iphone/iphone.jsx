@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Lock from '../lock/lock';
 import Pin from '../pin/pin';
+import { LockClosed } from 'react-ionicons';
 import './iphone.css';
 function Iphone() {
   const [status, setStatus] = useState(false);
+  const onlyOn = ()=>{
+    if(!status){
+      return(
+        <LockClosed color={'#ffffff'} height="13px" width="13px" style={{position : "relative",left : "7px",top :"0px"}} />
+      )
+    }else{
+      return null;
+    }
+  }
   const condition = () => {
     if (status) {
       return (
@@ -30,6 +40,9 @@ function Iphone() {
   return (
     <div className="iphone">
       <div className="notch">
+        {
+          onlyOn()
+        }
         <div className="front_camera"></div>
       </div>
       <div className="notification">
