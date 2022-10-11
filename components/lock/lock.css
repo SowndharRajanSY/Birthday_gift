@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+div.lockStyle {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 150px;
+  height: 420px;
+}
+.DateBox {
+  margin-top: 20px;
+  text-align: center;
+}
+.DateBox h2 {
+  font-size: 45px;
+  font-weight: 600;
+}
+.DateBox h4 {
+  display: inline;
+  margin-left: 2px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.iconBox {
+  display: flex;
+  justify-content: space-between;
+}
+.iconic {
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(1px) saturate(100%);
+  backdrop-filter: blur(5px) saturate(100%);
+}
+.Torch{
+  left: -5px;
+}
+.camera{
+  right : -5px;
+}
+.bottom{
+  position: absolute;
+  bottom: -20px;
+  left: 28px;
+  border-radius: 20px;
+  width: 100px;
+  display: grid;
+  place-self: center;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
