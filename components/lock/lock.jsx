@@ -65,7 +65,7 @@ export default function Lock(props) {
       </div>
       <div className="iconBox">
         <div className="iconic Torch">
-          <FlashlightSharp color="#ffffff" width="15px" height="25px" />
+          <FlashlightSharp color="#ffffff" width="15px" height="25px" style={{transform : "rotate(-48deg)"}}/>
         </div>
         <div className="iconic camera">
           <CameraSharp color="#ffffff" width="15px" height="15px" />
