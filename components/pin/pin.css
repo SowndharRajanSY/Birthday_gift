@@ -33,15 +33,45 @@ div.PinStyle{
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
+.pins.animate{
+  animation: animate 0.2s;
+}
+@keyframes animate{
+  50%{
+    transform: translate(5px);
+  }
+  100%{
+    transform: translate(-5px);
+  }
+}
+.pins input{
+  padding: 0;
+  width: 90px;
+  position: absolute;
+  top: 62.5px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-indent: 6.2px;
+  backdrop-filter: blur(0.5px) saturate(90%);
+  -webkit-backdrop-filter: blur(0.5px) saturate(90%);
+  background-color: rgba(255, 255, 255,0.001);
+  font-size: 45px;
+  border: none;
+  outline: none;
+  cursor: none;
 }
 .pins span{
-  margin-left: 5px;
+  margin-left: 4px;
   width: 10px;
   height: 10px;
   border: 1px solid #fff;
   border-radius: 50%;
 }
+
 .Bottom{
   padding: 2px;
   display: flex;
@@ -51,6 +81,8 @@ div.PinStyle{
   height: 300px;
 }
 .pinBox{
+  position: relative;
+  top: -15px;
   padding: 7px;
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +98,7 @@ div.PinStyle{
   -webkit-backdrop-filter: blur(1px) saturate(40%);
   background-color: rgba(255, 255, 255, 0.15);
   border: none;
+  cursor: pointer;
 }
 .pinBox button:last-child{
   position: relative;
@@ -75,18 +108,50 @@ div.PinStyle{
   display: inline;
   position: relative;
   margin-left: 5px;
+  top: -15px;
 }
 .Bottom h5:nth-child(2){
   right: -50px;
 }
-.bottom{
-  bottom: 0px;
-  left: 20px;
+.bottom_pin{
+  position: absolute;
+  bottom: -25px;
+  left: 85px;
   border-radius: 20px;
-  width: 100px;
-  align-self: center;
+  display: grid;
+  place-self: center;
+}
+.slider_pin {
+  -webkit-appearance: none;
+  visibility: hidden;
+  width: 35px;
   height: 5px;
+  outline: none;
+  transform : rotate(-90deg) translateX(35px);
   background-color: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+
+}
+
+.slider_pin::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: visible;
+  width: 5px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.slider_pin::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
 }

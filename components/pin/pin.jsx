@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { LockClosed } from 'react-ionicons';
 import './pin.css';
 
-export default function Pin() {
+export default function Pin(props) {
+  const [originalPin, setOrginalPin] = useState('123456');
+  const [pins, setPins] = useState('');
+  const [click, setClick] = useState(0);
+  const [status, setStatus] = useState(true);
+  const Numpad = (e) => {
+    setPins(pins + e.target.value);
+  };
+  useEffect(() => {
+    if (pins.length > 6) {
+      setPins('');
+    } else {
+      if (pins == originalPin) {
+        alert('welcome');
+        setPins('');
+      } else {
+        setPins('');
+      }
+    }
+  }, [pins.length == 6]);
   return (
     <div className="PinStyle">
       <div className="Top">
@@ -12,7 +31,18 @@ export default function Pin() {
         <div className="passcode">
           <h5>Enter the Passcode</h5>
           <br />
-          <div className="pins">
+          <div
+            className={['pins', ...Array.from(pins == '' && ['animate'])].join(
+              ' '
+            )}
+          >
+            <input
+              type="password"
+              value={pins}
+              onChange={(e) => {
+                setPins(e.target.value);
+              }}
+            />
             <span></span>
             <span></span>
             <span></span>
@@ -24,23 +54,68 @@ export default function Pin() {
       </div>
       <div className="Bottom">
         <div className="pinBox">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>0</button>
+          <button value="1" onClick={Numpad}>
+            1
+          </button>
+          <button value="2" onClick={Numpad}>
+            2
+          </button>
+          <button value="3" onClick={Numpad}>
+            3
+          </button>
+          <button value="4" onClick={Numpad}>
+            4
+          </button>
+          <button value="5" onClick={Numpad}>
+            5
+          </button>
+          <button value="6" onClick={Numpad}>
+            6
+          </button>
+          <button value="7" onClick={Numpad}>
+            7
+          </button>
+          <button value="8" onClick={Numpad}>
+            8
+          </button>
+          <button value="9" onClick={Numpad}>
+            9
+          </button>
+          <button value="0" onClick={Numpad}>
+            0
+          </button>
         </div>
         <div className="cancel">
-          <h5>Forget Password</h5>
-          <h5>Cancel</h5>
+          <h5 style={{ cursor: 'pointer' }}>Forget Password</h5>
+          <h5
+            onClick={() => {
+              setClick(0);
+              setStatus(!status);
+              props.onChange(status);
+            }}
+            style={{ cursor: 'pointer' }}
+          >
+            Cancel
+          </h5>
         </div>
       </div>
-      <div className="bottom"></div>
+      <div className="bottom_pin">
+        <input
+          className="slider_pin"
+          type="range"
+          value={click}
+          onChange={(e) => {
+            setClick(e.target.value);
+            if (click > 2) {
+              setClick(0);
+              setStatus(!status);
+              props.onChange(status);
+            }
+          }}
+          min="0"
+          max="5"
+        />
+      </div>
     </div>
   );
 }
