@@ -4,6 +4,12 @@ import Pin from '../pin/pin';
 import { LockClosed } from 'react-ionicons';
 import './iphone.css';
 function Iphone() {
+  //Need For Time
+  let d = new Date();
+  const [hour,setHour] = useState(d.getHours());
+  const [minute,setMinute] = useState(d.getMinutes());
+  const [dateTime,setDateTime] = useState(d);
+  //Ends
   const [status, setStatus] = useState(false);
   const onlyOn = ()=>{
     if(!status){
@@ -14,6 +20,49 @@ function Iphone() {
       return null;
     }
   }
+    //Function For Time
+    const days = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+    const months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+    const update = ()=>{
+      setDateTime(new Date());
+      if(Number(hour) <= 0){
+        setHour('0'+dateTime.getHours());
+      }else{
+        setHour(dateTime.getHours());
+      }
+      if(Number(minute) <=0){
+        setMinute('0'+dateTime.getMinutes());
+      }else{
+        setMinute(dateTime.getMinutes());
+      }
+    }
+    useEffect(()=>{
+      setInterval(update(),1000);
+    },[])
+    let month = months[dateTime.getMonth()];
+    let date = dateTime.getDate();
+    let day = days[dateTime.getDay()];//ends
   const condition = () => {
     if (status) {
       return (
@@ -46,7 +95,9 @@ function Iphone() {
         <div className="front_camera"></div>
       </div>
       <div className="notification">
+        <div className="time">{hour}:{minute}</div>
         <div className="msgBox_dynamic"></div>
+        <div className="statusBar"></div>
       </div>
       <div className="display"></div>
       <div className="navigation"></div>

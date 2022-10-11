@@ -36,12 +36,12 @@ export default function Lock(props) {
   const update = ()=>{
     setDateTime(new Date());
     if(Number(hour) <= 0){
-      setHour('0'+dateTime.getHours());
+      setHour('0' + dateTime.getHours());
     }else{
       setHour(dateTime.getHours());
     }
     if(Number(minute) <=0){
-      setMinute('0'+dateTime.getMinutes());
+      setMinute('0' + dateTime.getMinutes());
     }else{
       setMinute(dateTime.getMinutes());
     }
@@ -65,7 +65,7 @@ export default function Lock(props) {
       </div>
       <div className="iconBox">
         <div className="iconic Torch">
-          <FlashlightSharp color="#ffffff" width="15px" height="25px" style={{transform : "rotate(-48deg)"}}/>
+          <FlashlightSharp color="#ffffff" width="15px" height="25px" style={{transform : "rotate(-47deg)"}}/>
         </div>
         <div className="iconic camera">
           <CameraSharp color="#ffffff" width="15px" height="15px" />
