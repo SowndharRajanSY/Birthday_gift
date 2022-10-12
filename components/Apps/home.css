@@ -10,26 +10,30 @@
 .Home{
   display: flex;
   justify-content: space-between;
-  overflow-x: scroll;
-  width: 215px;
+  width: 210px;
   height: 480px;
 }
-@media (max-width:480px){
-  .Home::-webkit-scrollbar{
-    width: 0;
-  }
-}
-@media (max-width:960px){
-  .Home::-webkit-scrollbar{
-    width: 0;
-  }
-}
+
 .firstPage{
   display: flex;
+  position: relative;
+  bottom: -80px;
+  left: -8.9px;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  margin: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.secondPage{
+  display: flex;
+  position: relative;
+  left: -0.15px;
+  top: -60px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-left: 0.5px;
 }
 .main{
   position: relative;
@@ -37,6 +41,7 @@
   display: flex;
   justify-content: space-around;
   gap: 15px;
+  margin: 5px;
 }
 .main.default{
   margin-top: 50px;

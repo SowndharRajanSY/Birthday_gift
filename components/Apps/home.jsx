@@ -1,10 +1,20 @@
 import React from 'react';
 import './home.css';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 export default function Apps() {
   return (
     <div className="Home">
-      <div className="firstPage">
+      <Swiper
+      spaceBetween={25}
+      slidesPerView={1}
+
+    >
+      <SwiperSlide><div className="firstPage">
         <div className="widgetBox"></div>
         <div className="main row-1">
           <div className="photos">
@@ -110,14 +120,13 @@ export default function Apps() {
             />
           </div>
         </div>
-      </div>
-      <div className="secondPage">
+      </div></SwiperSlide>
+      <SwiperSlide><div className="secondPage">
         <div className="firstPage">
-          <div className="widgetBox"></div>
           <div className="main row-1">
             <div className="photos">
               <img
-                src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_photos__4ceqb6df1nmm_large.png"
+                src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_ibooks__f6mnfhud3066_large.png"
                 alt="photos"
               />
             </div>
@@ -192,7 +201,7 @@ export default function Apps() {
               />
             </div>
           </div>
-          <div className="main default">
+          <div className="main row-4">
             <div className="phone">
               <img
                 src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_phone__demfm8e8tvau_large.png"
@@ -219,7 +228,8 @@ export default function Apps() {
             </div>
           </div>
         </div>
-      </div>
+      </div></SwiperSlide>
+      </Swiper>
     </div>
   );
 }
