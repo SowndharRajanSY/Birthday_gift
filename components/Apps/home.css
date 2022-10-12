@@ -14,6 +14,16 @@
   width: 215px;
   height: 480px;
 }
+@media (max-width:480px){
+  .Home::-webkit-scrollbar{
+    width: 0;
+  }
+}
+@media (max-width:960px){
+  .Home::-webkit-scrollbar{
+    width: 0;
+  }
+}
 .firstPage{
   display: flex;
   flex-direction: column;
