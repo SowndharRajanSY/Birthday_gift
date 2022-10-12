@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Lock from '../lock/lock';
 import Pin from '../pin/pin';
+import Apps from '../Apps/home';
 import { LockClosed, Wifi, BatteryFull } from 'react-ionicons';
 import './iphone.css';
 function Iphone() {
@@ -11,7 +12,7 @@ function Iphone() {
   const [dateTime, setDateTime] = useState(d);
   //Ends
   const [status, setStatus] = useState(false);
-  const [isloggedin, setLoggedin] = useState(false);
+  const [isloggedin, setLoggedin] = useState(true);
   const onlyOn = () => {
     if (!status) {
       return (
@@ -55,8 +56,7 @@ function Iphone() {
   }, []);
   const condition = () => {
     if (isloggedin) {
-      <div className="Apps">
-      </div>;
+      return <div className="Apps"><Apps/></div>;
     } else {
       if (status) {
         return (
