@@ -33,18 +33,16 @@ export default function Lock(props) {
     'November',
     'December',
   ];
+  function addZero(i) {
+    if (i < 10) {i = "0" + i}
+    return i;
+  }
   const update = ()=>{
     setDateTime(new Date());
-    if(Number(hour) <= 0){
-      setHour('0' + dateTime.getHours());
-    }else{
-      setHour(dateTime.getHours());
-    }
-    if(Number(minute) <=0){
-      setMinute('0' + dateTime.getMinutes());
-    }else{
-      setMinute(dateTime.getMinutes());
-    }
+    let d1 = addZero(dateTime.getHours());
+    let m1 = addZero(dateTime.getMinutes());
+    setHour(d1);
+    setMinute(m1);
   }
   useEffect(()=>{
     setInterval(update(),1000);

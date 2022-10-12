@@ -22,42 +22,59 @@ div.iphone{
 }
 div.notch{
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   top: 10px;
   left: 75px;
-  width : 95px;
+  width : 60px;
   height : 21px;
   border-radius: 12px;
   background-color: #000;
 }
-div.notch .front_camera{
-  position: relative;
-  top: 6px;
-  float: right;
-  right: 10px;
+.front_camera{
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  left: 70px;
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  box-shadow: 3px 3px 1px 0.5px #000,
-              -3px -3px 1px 0.5px #000,
-              inset 0.2px 0.2px 5px 1px #000,
+  box-shadow: inset 0.2px 0.2px 5px 1px #000,
+              0.1px 0px 0.2px 1px #545454,
               inset -0.5px -0.5px 20px 1px #333;
   backdrop-filter: blur(1px) saturate(40%);
-  -webkit-backdrop-filter: blur(1px) saturate(40%);
+  -webkit-backdrop-filter: blur(1px) saturate(40%); 
   display: flex;
-  justify-content: center;
-  align-items: center; 
 }
 .front_camera::after{
   content: '';
   position: absolute;
+  left: 2.50px;
+  align-self: center;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   backdrop-filter: blur(1px) saturate(40%);
   -webkit-backdrop-filter: blur(1px) saturate(40%);
   background-color: rgba(255, 255, 255, 0.15);
-  /* background-color: #fff; */
+}
+.notification{
+  position: absolute;
+  width : 240px;
+  height : 50px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.notification .time{
+  position: absolute;
+  top: 11px;
+  left: 25px;
+  font-size: 15px;
+}
+.notification .statusBar{
+  position: absolute;
+  top: 11px;
+  right: 25px;
 }
 div.display{
   position: absolute;
@@ -77,6 +94,11 @@ div.display{
   left: 50px;
 }
 .pin{
+  position: absolute;
+  align-self: center;
+  left: 20px;
+}
+.Apps{
   position: absolute;
   align-self: center;
   left: 20px;

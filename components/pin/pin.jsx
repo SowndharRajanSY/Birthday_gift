@@ -4,6 +4,7 @@ import './pin.css';
 
 export default function Pin(props) {
   const [originalPin, setOrginalPin] = useState('123456');
+  const [isloggedin,setLoggedin] = useState(false);
   const [pins, setPins] = useState('');
   const [click, setClick] = useState(0);
   const [status, setStatus] = useState(true);
@@ -15,8 +16,9 @@ export default function Pin(props) {
       setPins('');
     } else {
       if (pins == originalPin) {
-        alert('welcome');
+        setLoggedin(true);
         setPins('');
+        props.onChange(status,isloggedin);
       } else {
         setPins('');
       }
