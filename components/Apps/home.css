@@ -10,7 +10,7 @@
 .Home{
   display: flex;
   position: relative;
-  left: -11.2px;
+  left: -10px;
   justify-content: space-between;
   width: 223px;
   height: 480px;
@@ -42,25 +42,29 @@
   left: 0px;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
   margin: 5px;
 }
 .main.default{
   position: absolute;
-  left: -3px;
   display: flex;
+  left: -8px;
   align-items: center;
   gap: 0px;
-  width: 220px;
-  height: 60px;
+  width: 210px;
+  height: 54px;
   bottom: 0px;
-  border-radius: 20px;
+  /* border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px; */
+  border-radius: 18px;
   margin-top: 50px;
-  backdrop-filter: blur(1px) saturate(40%);
-  -webkit-backdrop-filter: blur(1px) saturate(40%);
-  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  background-color: rgba(255, 255, 255, 0.466);
 }
 img{
-  width: 35px;
+  width: 33px;
   cursor: pointer;
 }
