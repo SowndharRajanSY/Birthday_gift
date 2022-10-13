@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Whatsapp{
+  position: absolute;
+  z-index: 99;
+  width: 230px;
+  height: 489px;
+  left: -4px;
+  top: -4.5px;
+  border-radius: 40px;
+  background-color: #333;
+}

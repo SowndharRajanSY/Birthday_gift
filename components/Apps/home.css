@@ -62,3 +62,49 @@ img{
   width: 33px;
   cursor: pointer;
 }
+.functionOfApps{
+  position: absolute;
+}
+.bottom_lock{
+  position: absolute;
+  bottom: -35px;
+  left: 107px;
+  border-radius: 20px;
+  z-index: 999;
+}
+.slider_lock {
+  -webkit-appearance: none;
+  visibility: hidden;
+  width: 5px;
+  height: 3px;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: opacity 0.5s;
+  transform : rotate(-90deg) translateX(35px);
+  background-color: rgba(15, 2, 2, 0.849);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
+}
+
+.slider_lock::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: visible;
+  width: 3px;
+  height: 85px;
+  background-color: rgba(15, 2, 2, 0.753);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.slider_lock::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}

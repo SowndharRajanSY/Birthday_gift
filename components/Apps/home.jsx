@@ -1,12 +1,34 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './home.css';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import AppsFunction from '../AppsFunction/appsfunction';
 
 export default function Apps() {
+  const [isWhatsapp,setWhatsapp] = useState(false);
+  const [click,setClick] = useState(0);
+  const [status,setStatus] = useState(false);
+  const AppOn = ()=>{
+    setWhatsapp(true);
+  }
+  const AppOnOff = ()=>{
+    if(!status){
+      return(
+        <div className="FunctionOfApps">
+          <AppsFunction status={isWhatsapp}/>
+        </div>
+      )
+    }
+  }
+  useEffect(()=>{
+    if(click>2){
+      setClick(0);
+      setStatus(!status);
+    }
+  },[click > 2])
   return (
     <div className="Home">
       <Swiper spaceBetween={25} slidesPerView={1}>
@@ -279,7 +301,7 @@ export default function Apps() {
                 </div>
               </div>*/}
               <div className="main row-7">
-                <div className="whatsapp" style={{transform : "translateX(-75px)"}}>
+                <div className="whatsapp" style={{transform : "translateX(-75px)"}} onClick={AppOn}>
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/3992/3992601.png"
                     alt="whatsapp"
@@ -316,6 +338,13 @@ export default function Apps() {
                 />
               </div>
             </div>
+            <div className="bottom_lock"><input className="slider_lock" type="range" value={click} onChange={(e)=>{
+          setClick(e.target.value);
+        }} min="0" max="5"/></div>
+            {
+
+              AppOnOff()
+            }
     </div>
   );
 }
