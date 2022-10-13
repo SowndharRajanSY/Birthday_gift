@@ -24,11 +24,11 @@ export default function Apps() {
     }
   }
   useEffect(()=>{
-    if(click>2){
+    if(click>4){
       setClick(0);
       setStatus(!status);
     }
-  },[click > 2])
+  },[click > 4])
   return (
     <div className="Home">
       <Swiper spaceBetween={25} slidesPerView={1}>

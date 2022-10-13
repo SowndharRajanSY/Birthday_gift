@@ -75,7 +75,7 @@ img{
 .slider_lock {
   -webkit-appearance: none;
   visibility: hidden;
-  width: 5px;
+  width: 8px;
   height: 3px;
   outline: none;
   -webkit-transition: 0.5s;
