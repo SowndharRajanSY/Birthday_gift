@@ -52,10 +52,6 @@
   width: 210px;
   height: 54px;
   bottom: 0px;
-  /* border-bottom-right-radius: 19px;
-  border-bottom-left-radius: 19px;
-  border-top-left-radius: 19px;
-  border-top-right-radius: 19px; */
   border-radius: 18px;
   margin-top: 50px;
   backdrop-filter: blur(100px);
