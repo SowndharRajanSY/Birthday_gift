@@ -91,32 +91,6 @@ export default function Apps() {
                 />
               </div>
             </div>
-            <div className="main default">
-              <div className="phone">
-                <img
-                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_phone__demfm8e8tvau_large.png"
-                  alt="phone"
-                />
-              </div>
-              <div className="message">
-                <img
-                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_messages__p96yz9z3xnum_large.png"
-                  alt="message"
-                />
-              </div>
-              <div className="camera">
-                <img
-                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_camera__ff8fzi42yaqi_large.png"
-                  alt="camera"
-                />
-              </div>
-              <div className="safari">
-                <img
-                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_safari__bwe30bfu9076_large.png"
-                  alt="safari"
-                />
-              </div>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -252,7 +226,7 @@ export default function Apps() {
                   />
                 </div>
               </div>
-              <div className="main row-6">
+              {/* <div className="main row-6">
                 <div className="movie">
                   <img
                     src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_imovie__eabjglfvwqye_large.png"
@@ -303,19 +277,45 @@ export default function Apps() {
                     alt="support"
                   />
                 </div>
-              </div>
+              </div>*/}
               <div className="main row-7">
                 <div className="whatsapp" style={{transform : "translateX(-75px)"}}>
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/3992/3992601.png"
                     alt="whatsapp"
                   />
-                </div>
+                </div> 
               </div>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
+      <div className="main default">
+              <div className="phone">
+                <img
+                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_phone__demfm8e8tvau_large.png"
+                  alt="phone"
+                />
+              </div>
+              <div className="message">
+                <img
+                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_messages__p96yz9z3xnum_large.png"
+                  alt="message"
+                />
+              </div>
+              <div className="camera">
+                <img
+                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_camera__ff8fzi42yaqi_large.png"
+                  alt="camera"
+                />
+              </div>
+              <div className="safari">
+                <img
+                  src="https://www.apple.com/v/iphone-14-pro/b/images/specs/icon_safari__bwe30bfu9076_large.png"
+                  alt="safari"
+                />
+              </div>
+            </div>
     </div>
   );
 }
