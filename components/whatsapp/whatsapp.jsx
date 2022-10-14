@@ -8,6 +8,7 @@ import {
   ApertureOutline,
   CogOutline,
   CreateOutline,
+  CameraReverseOutline
 } from 'react-ionicons';
 import 'swiper/css';
 import './whatsapp.css';
@@ -15,20 +16,27 @@ import './whatsapp.css';
 export default function Whatsapp() {
   return (
     <div className="Whatsapp">
-      <Swiper initialSlide={3}>
+      <Swiper initialSlide={0}>
         <SwiperSlide>
           <div className="Status">
             <h1>status</h1>
+            <div className="myStatus"></div>
+            <div className="recentUpdates"></div>
+            <div className="viewedUpdates"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="Calls">
-            <h2>calls</h2>
+            <p>There's no call logs</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="Camera">
             <Webcam width="225.5px" height="100%"/>
+            <div className="buttons_slade">
+              <CameraReverseOutline width="30px" height="30px" style={{position : "relative",top : "-60px",right : "-165px"}}/>
+              <div className="btn"></div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
