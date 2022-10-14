@@ -31,7 +31,7 @@ export default function Whatsapp() {
   }
   return (
     <div className="Whatsapp">
-      <Swiper initialSlide={0} onSlideChange={(e) => setActive(e.snapIndex)}>
+      <Swiper initialSlide={3} onSlideChange={(e) => setActive(e.snapIndex)}>
         <SwiperSlide>
           <div className="Status">
             <h1>status</h1>
