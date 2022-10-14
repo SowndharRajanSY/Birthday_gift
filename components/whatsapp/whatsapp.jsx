@@ -1,11 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Webcam from 'react-webcam';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
-  CallOutline,
-  CameraOutline,
-  ChatbubbleOutline,
-  ApertureOutline,
+  Call,
+  CameraSharp,
+  ChatbubbleSharp,
+  ApertureSharp,
   CogOutline,
   CreateOutline,
   CameraReverseOutline
@@ -14,9 +14,24 @@ import 'swiper/css';
 import './whatsapp.css';
 
 export default function Whatsapp() {
+  const[isActive,setActive] = useState(0);
+  const Camera =()=>{
+    if(isActive == 2){
+      return(
+        <Webcam width="225.5px" height="100%"/> 
+      )
+    }
+  }
+  const Active = (val)=>{
+    if(isActive == val){
+      return "#656ffa";
+    }else{
+      return "#fff";
+    }
+  }
   return (
     <div className="Whatsapp">
-      <Swiper initialSlide={0}>
+      <Swiper initialSlide={0} onSlideChange={(e) => setActive(e.snapIndex)}>
         <SwiperSlide>
           <div className="Status">
             <h1>status</h1>
@@ -32,7 +47,7 @@ export default function Whatsapp() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="Camera">
-            {/* <Webcam width="225.5px" height="100%"/> */}
+            {Camera()}
             <div className="buttons_slade">
               <CameraReverseOutline width="30px" height="30px" style={{position : "relative",top : "-60px",right : "-165px"}}/>
               <div className="btn"></div>
@@ -80,24 +95,34 @@ export default function Whatsapp() {
         </SwiperSlide>
       </Swiper>
       <div className="StatusBar">
-        <div className="status">
-          <ApertureOutline />
+        <div className={['status', ...Array.from(isActive ==0 && ['active'])].join(
+              ' '
+            )}>
+          <ApertureSharp color={Active(0)} />
           <h5>status</h5>
         </div>
-        <div className="calls">
-          <CallOutline style={{position : "relative",left : "-3px"}}/>
+        <div className={['calls', ...Array.from(isActive ==1 && ['active'])].join(
+              ' '
+            )}>
+          <Call color={Active(1)} style={{position : "relative",left : "-3px"}}/>
           <h5>calls</h5>
         </div>
-        <div className="camera">
-          <CameraOutline />
+        <div className={['camera', ...Array.from(isActive ==2 && ['active'])].join(
+              ' '
+            )}>
+          <CameraSharp color={Active(2)}/>
           <h5>camera</h5>
         </div>
-        <div className="chats">
-          <ChatbubbleOutline />
+        <div className={['chats', ...Array.from(isActive ==3 && ['active'])].join(
+              ' '
+            )}>
+          <ChatbubbleSharp color={Active(3)} />
           <h5>chats</h5>
         </div>
-        <div className="settings">
-          <CogOutline color="#ffffff" />
+        <div className={['settings', ...Array.from(isActive ==4 && ['active'])].join(
+              ' '
+            )}>
+          <CogOutline color="#ffffff" color={Active(4)} />
           <h5>settings</h5>
         </div>
       </div>
