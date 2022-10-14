@@ -103,26 +103,34 @@ h5{
   justify-content: center;
   align-items: center;
 }
-.Status h1{
+.Status h4{
+  margin-top: 5px;
+  color: #545454;
+}
+.Status h2{
   position: relative;
-  top: 20px;
+  top: 25px;
+  margin-bottom: 35px;
 }
 .myStatus{
-  margin-top: 20px;
+  margin-top: 10px;
   width: 99%;
   min-height: 100px;
   position: relative;
   background-color: #fff;
 }
+.Status{
+  overflow: scroll;
+}
 .recentUpdates{
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
   width: 99%;
   min-height: 180px;
   background-color: #fff;
 }
 .viewedUpdates{
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
   width: 99%;
   min-height: 50px;

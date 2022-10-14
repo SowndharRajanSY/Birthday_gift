@@ -34,9 +34,11 @@ export default function Whatsapp() {
       <Swiper initialSlide={3} onSlideChange={(e) => setActive(e.snapIndex)}>
         <SwiperSlide>
           <div className="Status">
-            <h1>status</h1>
+            <h2>status</h2>
             <div className="myStatus"></div>
+            <h4>RECENT UPDATES</h4>
             <div className="recentUpdates"></div>
+            <h4>VIEWED UPDATES</h4>
             <div className="viewedUpdates"></div>
           </div>
         </SwiperSlide>
