@@ -1,15 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .Whatsapp{
   position: absolute;
-  z-index: 99;
-  width: 230px;
-  height: 489px;
-  left: -4px;
-  top: -4.5px;
-  border-radius: 40px;
-  background-color: #fff;
+  z-index: 2;
+  width: 225.5px;
+  height: 488px;
+  left: -1.5px;
+  top: -4px;
+  border-radius: 35px;
+  background-color: #333;
+}
+.Bar{
+  position: relative;
+  top: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+h1{
+  font-weight: 700;
+}
+.Bar h4{
+  font-size: 14px;
+  color: #656ffa;
+  font-weight: 600;
+  cursor: pointer;
+}
+.msgBox{
+  margin: 30px 5px 5px 5px;
+  display: grid;
+  padding: 5px;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  grid-gap: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.msgBox:hover{
+  background-color: #545454;
+}
+.profile img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.details h3{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 2px;
+}
+.content.MsgTime h4{
+  font-size: 0.6rem;
+}
+.content p{
+  font-size: 0.6rem;
+}
+.StatusBar{
+  width: 220px;
+  height: 50px;
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+h5{
+  font-size: 0.63rem;
+  color: #fff;
 }

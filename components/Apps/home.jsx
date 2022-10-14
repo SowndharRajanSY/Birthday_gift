@@ -8,7 +8,7 @@ import 'swiper/css';
 import AppsFunction from '../AppsFunction/appsfunction';
 
 export default function Apps() {
-  const [isWhatsapp,setWhatsapp] = useState(false);
+  const [isWhatsapp,setWhatsapp] = useState(true);
   const [click,setClick] = useState(0);
   const [status,setStatus] = useState(false);
   const AppOn = ()=>{
