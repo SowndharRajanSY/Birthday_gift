@@ -28,7 +28,7 @@ export default function Whatsapp() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="Camera">
-            <Webcam width="225.5px" height="100vh"/>
+            <Webcam width="225.5px" height="100%"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
