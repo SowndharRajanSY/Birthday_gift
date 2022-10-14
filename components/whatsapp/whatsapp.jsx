@@ -32,7 +32,7 @@ export default function Whatsapp() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="Camera">
-            <Webcam width="225.5px" height="100%"/>
+            {/* <Webcam width="225.5px" height="100%"/> */}
             <div className="buttons_slade">
               <CameraReverseOutline width="30px" height="30px" style={{position : "relative",top : "-60px",right : "-165px"}}/>
               <div className="btn"></div>
