@@ -7,6 +7,7 @@
 }
 .Whatsapp{
   position: absolute;
+  display: flex;
   z-index: 2;
   width: 225.5px;
   height: 488px;
@@ -14,6 +15,15 @@
   top: -4px;
   border-radius: 35px;
   background-color: #333;
+}
+.MsgSection{
+  width: 225.5px;
+  height: 436px;
+}
+.Calls,.Status,.Camera{
+  position: relative;
+  width: 225.5px;
+  height: 436px;
 }
 .Bar{
   position: relative;
@@ -54,8 +64,8 @@ h1{
   font-weight: 600;
   margin: 2px;
 }
-.content.MsgTime h4{
-  font-size: 0.6rem;
+.MsgTime h4{
+  font-size: 13px;
 }
 .content p{
   font-size: 0.6rem;
@@ -73,6 +83,8 @@ h1{
   gap: 18px;
 }
 h5{
+  position: relative;
+  left: -0.5px;
   font-size: 0.63rem;
   color: #fff;
 }
