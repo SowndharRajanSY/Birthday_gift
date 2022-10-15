@@ -11,7 +11,7 @@ import {
   CameraReverseOutline,
   VideocamOutline,
   CallOutline,
-  SendOutline
+  SendOutline,
 } from 'react-ionicons';
 import 'swiper/css';
 import './whatsapp.css';
@@ -19,7 +19,7 @@ import FlashOutline from 'react-ionicons/lib/FlashOutline';
 
 export default function Whatsapp() {
   const [isActive, setActive] = useState(0);
-  const [isChat,setChat] = useState(false);
+  const [isChat, setChat] = useState(false);
   const Camera = () => {
     if (isActive == 2) {
       return <Webcam width="225.5px" height="100%" />;
@@ -83,12 +83,15 @@ export default function Whatsapp() {
                   alt="profile"
                 />
               </div>
-              <div className="details" onClick={()=>{setChat(true)}}>
+              <div
+                className="details"
+                onClick={() => {
+                  setChat(true);
+                }}
+              >
                 <h3>Yosana</h3>
                 <div className="content">
-                  <p>
-                    Hi Neha 😍
-                  </p>
+                  <p>Hi Neha 😍</p>
                 </div>
               </div>
               <div className="MsgTime">
@@ -137,61 +140,71 @@ export default function Whatsapp() {
           <h5>chats</h5>
         </div>
       </div>
-      {isChat ? <div className="msgInnerBox">
-        <div className="user">
-          <div className="profile">
-            <div className="StatusBars">
-              <div className="back">
-                <ChevronBackOutline onClick={()=>{setChat(false)}} style={{cursor : "pointer"}}/>
+      {isChat ? (
+        <div className="msgInnerBox">
+          <div className="user">
+            <div className="profile">
+              <div className="StatusBars">
+                <div className="back">
+                  <ChevronBackOutline
+                    onClick={() => {
+                      setChat(false);
+                    }}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </div>
+                <div className="callsBar">
+                  <VideocamOutline color="#fff" />
+                  <CallOutline />
+                </div>
               </div>
-              <div className="callsBar">
-                <VideocamOutline color="#fff" />
-                <CallOutline />
+              <div className="userInfo">
+                <div className="profileImg">
+                  <img
+                    src="https://png.pngitem.com/pimgs/s/7-70690_thinking-woman-png-transparent-hd-photo-beautiful-girl.png"
+                    alt="profile"
+                  />
+                </div>
+                <div className="name_lastSeen">
+                  <h4>Yosana</h4>
+                  <p>last seen at oct 10 12.00AM</p>
+                </div>
               </div>
             </div>
-            <div className="userInfo">
-              <div className="profileImg">
-                <img
-                  src="https://png.pngitem.com/pimgs/s/7-70690_thinking-woman-png-transparent-hd-photo-beautiful-girl.png"
-                  alt="profile"
-                />
+            <div className="messages">
+              <div className="msg msg1">
+                <p>Hi Neha 😍</p>
               </div>
-              <div className="name_lastSeen">
-                <h4>Yosana</h4>
-                <p>last seen at oct 10 12.00AM</p>
+
+              <div className="msg msg2">
+                <p>
+                  Many more happy returns of the day❤️😍..intha 20th birthdayla
+                  nee manasula ethachu kastamo sogamo kovamo vachiruntha athaila
+                  maranthuttu intha new birth day apo nalla happya intha year ah
+                  thodangu😊...intha birthday mattu illaama ella birthdayvu ella
+                  aasayu ella santhosamana nigalvu nadakka enmanasaara
+                  vaalthukiren😊❤️💕...
+                </p>
+              </div>
+
+              <div className="msg msg3">
+                <p>once again very many more happy returns of the day...💕💖</p>
+              </div>
+
+              <div className="msg msg3">
+                <p>ithuka ivlo naal pannainu ketta...kandipa aama🤣😂...😜💖</p>
+              </div>
+              <div className="msg msg3">
+                <p>reply panrathula ino set panala..🤣😂...😜</p>
               </div>
             </div>
-          </div>
-          <div className="messages">
-            <Swiper slidesPerView={"auto"} direction={"vertical"} spaceBetween={10} scrollbar={{ draggable: true }}>
-              <SwiperSlide>
-            <div className="msg msg1">
-              <p>Hi Neha 😍</p>
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="msg msg2">
-              <p>Many more happy returns of the day❤️😍..intha 20th birthdayla nee manasula ethachu kastamo sogamo kovamo vachiruntha athaila maranthuttu intha new birth day apo nalla happya intha year ah thodangu😊...intha birthday mattu illaama ella birthdayvu ella aasayu ella santhosamana nigalvu nadakka enmanasaara vaalthukiren😊❤️💕...</p>
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="msg msg3">
-              <p>once again very many more happy returns of the day...💕💖</p>
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="msg msg3">
-              <p>ithuka ivlo naal pannainu ketta...kandipa aama🤣😂...😜💖</p>
-            </div>
-            </SwiperSlide>
-            </Swiper>
-          </div>
-          <div className="replyBox">
+            <div className="replyBox">
               <input type="text" />
-              <SendOutline/>
+              <SendOutline />
             </div>
+          </div>
         </div>
-      </div> : null}
+      ) : null}
     </div>
   );
 }

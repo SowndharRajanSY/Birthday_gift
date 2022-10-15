@@ -186,7 +186,7 @@ h5{
 .messages{
   position: relative;
   height: 360px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .messages p{
   font-size: 13px;
