@@ -46,7 +46,12 @@ export default function Lock(props) {
   }
   useEffect(()=>{
     setInterval(update(),1000);
-  },[])
+    if(click>4){
+      setClick(0);
+      setStatus(!status);
+      props.onChange(status);
+    }
+  },[click > 4])
   let month = months[dateTime.getMonth()];
   let date = dateTime.getDate();
   let day = days[dateTime.getDay()];
@@ -68,13 +73,8 @@ export default function Lock(props) {
         <div className="iconic camera">
           <CameraSharp color="#ffffff" width="15px" height="15px" />
         </div>
-        <div className="bottom_lock"><input className="slider_lock1" type="range" value={click} onChange={(e)=>{
+        <div className="bottom_lock1"><input className="slider_lock1" type="range" value={click} onChange={(e)=>{
           setClick(e.target.value);
-          if(click>2){
-            setClick(0);
-            setStatus(!status);
-            props.onChange(status);
-          }
         }} min="0" max="5"/></div>
       </div>
     </div>

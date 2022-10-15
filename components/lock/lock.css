@@ -49,10 +49,10 @@ div.lockStyle {
 .camera{
   right : -5px;
 }
-.bottom_lock{
+.bottom_lock1{
   position: absolute;
-  bottom: -45px;
-  left: 52px;
+  bottom: -60px;
+  left: 68px;
   border-radius: 20px;
   display: grid;
   place-self: center;
@@ -60,7 +60,7 @@ div.lockStyle {
 .slider_lock1 {
   -webkit-appearance: none;
   visibility: hidden;
-  width: 35px;
+  width: 10px;
   height: 5px;
   outline: none;
   -webkit-transition: 0.5s;

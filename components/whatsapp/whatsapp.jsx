@@ -45,7 +45,7 @@ export default function Whatsapp() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          
+
           <div className="Calls">
             <p>There's no call logs</p>
           </div>
@@ -167,7 +167,7 @@ export default function Whatsapp() {
                 </div>
                 <div className="name_lastSeen">
                   <h4>Yosana</h4>
-                  <p>last seen at oct 10 12.00AM</p>
+                  <p>last seen at oct 11 12.00AM</p>
                 </div>
               </div>
             </div>

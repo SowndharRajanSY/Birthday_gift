@@ -114,8 +114,8 @@ div.PinStyle{
 }
 .bottom_pin{
   position: absolute;
-  bottom: -25px;
-  left: 85px;
+  bottom: -42px;
+  left: 89px;
   border-radius: 20px;
   display: grid;
   place-self: center;
@@ -123,7 +123,7 @@ div.PinStyle{
 .slider_pin {
   -webkit-appearance: none;
   visibility: hidden;
-  width: 35px;
+  width: 10px;
   height: 5px;
   outline: none;
   transform : rotate(-90deg) translateX(35px);

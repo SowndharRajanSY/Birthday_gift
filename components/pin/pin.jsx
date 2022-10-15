@@ -12,6 +12,11 @@ export default function Pin(props) {
     setPins(pins + e.target.value);
   };
   useEffect(() => {
+    if(click>4){
+      setClick(0);
+      setStatus(!status);
+      props.onChange(status);
+    }
     if (pins.length > 6) {
       setPins('');
     } else {
@@ -23,7 +28,7 @@ export default function Pin(props) {
         setPins('');
       }
     }
-  }, [pins.length == 6]);
+  }, [pins.length == 6],[click > 4]);
   return (
     <div className="PinStyle">
       <div className="Top">
@@ -121,3 +126,14 @@ export default function Pin(props) {
     </div>
   );
 }
+/*<input className="slider_lock" type="range" value={click} onChange={(e)=>{
+          setClick(e.target.value);
+        }} min="0" max="5"/>
+        
+        useEffect(()=>{
+    if(click>4){
+      setClick(0);
+      setStatus(!status);
+      props.onChange(status);
+    }
+  },[click > 4])*/
