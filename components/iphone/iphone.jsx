@@ -65,6 +65,7 @@ function Iphone() {
               onChange={(val) => {
                 setStatus(val);
               }}
+              changeLogin ={(val)=>{setLoggedin(val)}}
             />
           </div>
         );

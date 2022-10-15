@@ -23,7 +23,7 @@ export default function Pin(props) {
       if (pins == originalPin) {
         setLoggedin(true);
         setPins('');
-        props.onChange(status,isloggedin);
+        props.changeLogin(true);
       } else {
         setPins('');
       }
