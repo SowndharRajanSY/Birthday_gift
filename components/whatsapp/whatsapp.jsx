@@ -34,7 +34,7 @@ export default function Whatsapp() {
   };
   return (
     <div className="Whatsapp">
-      <Swiper initialSlide={4} onSlideChange={(e) => setActive(e.snapIndex)}>
+      <Swiper initialSlide={0} onSlideChange={(e) => setActive(e.snapIndex)}>
         <SwiperSlide>
           <div className="Status">
             <h2>status</h2>
@@ -199,7 +199,7 @@ export default function Whatsapp() {
               </div>
             </div>
             <div className="replyBox">
-              <input type="text" />
+              <input type="text" placeholder="Type your message.."/>
               <SendOutline />
             </div>
           </div>
