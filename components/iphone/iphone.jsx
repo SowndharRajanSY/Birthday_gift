@@ -11,8 +11,8 @@ function Iphone() {
   const [minute, setMinute] = useState(d.getMinutes());
   const [dateTime, setDateTime] = useState(d);
   //Ends
-  const [status, setStatus] = useState(false);
-  const [isloggedin, setLoggedin] = useState(true);
+  const [status, setStatus] = useState(true);
+  const [isloggedin, setLoggedin] = useState(false);
   const onlyOn = () => {
     if (!status) {
       return (

@@ -68,7 +68,7 @@ export default function Lock(props) {
         <div className="iconic camera">
           <CameraSharp color="#ffffff" width="15px" height="15px" />
         </div>
-        <div className="bottom_lock"><input className="slider_lock" type="range" value={click} onChange={(e)=>{
+        <div className="bottom_lock"><input className="slider_lock1" type="range" value={click} onChange={(e)=>{
           setClick(e.target.value);
           if(click>2){
             setClick(0);

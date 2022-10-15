@@ -15,7 +15,6 @@ import {
 } from 'react-ionicons';
 import 'swiper/css';
 import './whatsapp.css';
-import FlashOutline from 'react-ionicons/lib/FlashOutline';
 
 export default function Whatsapp() {
   const [isActive, setActive] = useState(0);
@@ -34,7 +33,7 @@ export default function Whatsapp() {
   };
   return (
     <div className="Whatsapp">
-      <Swiper initialSlide={0} onSlideChange={(e) => setActive(e.snapIndex)}>
+      <Swiper initialSlide={3} onSlideChange={(e) => setActive(e.snapIndex)}>
         <SwiperSlide>
           <div className="Status">
             <h2>status</h2>
@@ -46,6 +45,7 @@ export default function Whatsapp() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
+          
           <div className="Calls">
             <p>There's no call logs</p>
           </div>

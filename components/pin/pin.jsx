@@ -54,7 +54,7 @@ export default function Pin(props) {
           </div>
         </div>
       </div>
-      <div className="Bottom">
+      <div className="Bottom1">
         <div className="pinBox">
           <button value="1" onClick={Numpad}>
             1
@@ -87,7 +87,7 @@ export default function Pin(props) {
             0
           </button>
         </div>
-        <div className="cancel">
+        <div className="cancel1">
           <h5 style={{ cursor: 'pointer' }}>Forget Password</h5>
           <h5
             onClick={() => {

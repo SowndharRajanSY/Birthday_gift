@@ -57,7 +57,7 @@ div.lockStyle {
   display: grid;
   place-self: center;
 }
-.slider_lock {
+.slider_lock1 {
   -webkit-appearance: none;
   visibility: hidden;
   width: 35px;
@@ -72,7 +72,7 @@ div.lockStyle {
 
 }
 
-.slider_lock::-webkit-slider-thumb {
+.slider_lock1::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   visibility: visible;
@@ -85,7 +85,7 @@ div.lockStyle {
   border-radius: 20px;
 }
 
-.slider_lock::-moz-range-thumb {
+.slider_lock1::-moz-range-thumb {
   width: 25px;
   height: 25px;
   background-color: rgba(255, 255, 255, 0.4);
